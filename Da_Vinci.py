@@ -1,6 +1,3 @@
-#TODO: 
-#Tradurre in italiano
-
 import cryptocode
 from getpass import getpass
 from PIL import Image
@@ -9,12 +6,12 @@ str_encoded=0
 
 
 def crypto():
-    password = getpass("Inserisci la password da cifrare ")
+    password = getpass("Insert password to crypto ")
     print()
-    passkey = getpass("inserisci la chiave ")
+    passkey = getpass("Insert key ")
     print()
     str_encoded = cryptocode.encrypt(password, passkey)
-    y=input("Seleziona un opzione: \n 1. Visualizza stringa codificata \n 2. Salva stringa codificata su un file \n 3. Codifica stringa all'interno di una foto")
+    y=input("Choose an option: \n 1. See crypted string \n 2. Store crypted string into a new file \n 3. Use Steganography")
     if(y=="1"):
         print(str_encoded)
     elif(y=="2"):
@@ -31,8 +28,8 @@ def crypto():
 
 
 def decrypto():
-    keypass= getpass("inserisci la chiave ")
-    str_encoded = getpass("inserisci la stringa codificata ")
+    keypass= getpass("Insert the key ")
+    str_encoded = getpass("Insert the crypted string ")
     print()
     str_decoded = cryptocode.decrypt(str_encoded, keypass)
     print(str_decoded)
@@ -163,7 +160,7 @@ def decode():
 
 
 
-x=input("Benvenuto, scegli una tra le seguenti opzioni \n 1. Cripta la tua password\n 2. Decodifica una stringa codificata \n 3. Codifica all'interno di un immagine una stringa \n 4. Decodifica da un immagine la stringa segreta \n")
+x=input("Welcome, choose an option \n 1. Crypto your string\n 2. Decrypto your string \n 3. Steganography (Crypto) \n 4. Steganography (Decrypto) \n")
 if(x=="1"):
     crypto()
 elif(x=="2"):
@@ -172,4 +169,3 @@ elif(x=="3"):
     encode(str_encoded)
 elif(x=="4"):
     print("Decoded Word :  " + decode())
-
