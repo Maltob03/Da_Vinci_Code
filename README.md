@@ -34,7 +34,7 @@
 -->
 
 ![Image](https://res.cloudinary.com/maltob03/image/upload/v1684598956/Screenshot_2023-05-20_alle_18.02.22_gezcxt.png)
-##How it works
+## How it works
 
 The Python script provides a complete solution for string encryption, decryption, and steganography. Using a symmetric encryption algorithm, it allows users to encrypt a text string into an encrypted message, and later, decrypt it to obtain the original string.
 
